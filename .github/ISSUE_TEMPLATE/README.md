@@ -45,7 +45,7 @@ Use this when you need help or have questions about the website. This template a
 
 ## How to Use These Templates
 
-1. Go to the [Issues page](../../issues) of the repository
+1. Go to the Issues tab in the GitHub repository
 2. Click the "New Issue" button
 3. Choose the template that best matches your request
 4. Fill out the form fields
