@@ -1,0 +1,57 @@
+name: Bug Report
+description: Report something that isn't working correctly
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us fix the issue.
+        
+  - type: input
+    id: what-is-broken
+    attributes:
+      label: What's not working?
+      description: Describe in simple terms what you expected to happen vs. what actually happened
+      placeholder: e.g., The website shows blue colors but our school colors are white and lime green
+    validations:
+      required: true
+
+  - type: textarea
+    id: where-is-problem
+    attributes:
+      label: Where did you see this problem?
+      description: Tell us which page or section of the website has the issue
+      placeholder: e.g., On the main activities page, in the header, on the activity cards
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How can we see the problem?
+      description: List the steps to see the issue (if applicable)
+      placeholder: |
+        1. Go to the activities page
+        2. Look at the header colors
+        3. Notice they don't match our school colors
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: What should it look like or do instead?
+      description: Describe what the correct behavior should be
+      placeholder: e.g., The header should use white and lime green colors to match our school branding
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Any other details or screenshots?
+      description: Add any other information, screenshots, or examples that might help
+      placeholder: You can paste screenshots here or provide links to examples
+    validations:
+      required: false
