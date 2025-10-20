@@ -1,0 +1,111 @@
+name: Activity Data Change
+description: Add, update, or remove an activity from the system
+title: "[Activity]: "
+labels: ["data-change"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to activity information in the system.
+        
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: What type of change?
+      description: Select what you need to do
+      options:
+        - Add a new activity
+        - Update an existing activity
+        - Remove/delete an activity
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: The name of the activity (current name if updating/removing, new name if adding)
+      placeholder: e.g., Chess Club, Drama Club, Soccer Team
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity Description
+      description: A brief description of what the activity is about (required for new activities)
+      placeholder: e.g., Learn strategies and compete in chess tournaments
+    validations:
+      required: false
+
+  - type: input
+    id: schedule-days
+    attributes:
+      label: Which days does it meet?
+      description: List the days of the week
+      placeholder: e.g., Mondays and Fridays, or Tuesday, Thursday, Saturday
+    validations:
+      required: false
+
+  - type: input
+    id: schedule-time
+    attributes:
+      label: What time does it meet?
+      description: Provide the start and end times
+      placeholder: e.g., 3:15 PM - 4:45 PM
+    validations:
+      required: false
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum number of participants
+      description: What's the capacity for this activity?
+      placeholder: e.g., 20
+    validations:
+      required: false
+
+  - type: dropdown
+    id: difficulty-level
+    attributes:
+      label: Difficulty Level (optional)
+      description: Is this activity for specific skill levels?
+      options:
+        - All levels (no specific requirement)
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Activity Category
+      description: What type of activity is this?
+      options:
+        - Sports
+        - Arts
+        - Academic
+        - Technology
+        - Community
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-to-change
+    attributes:
+      label: If updating, what specifically needs to change?
+      description: Describe what information needs to be updated
+      placeholder: e.g., Change the time from 3:15 PM to 3:30 PM, Add Saturday to the schedule, Update max participants to 25
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Any other details about this activity or change request
+    validations:
+      required: false

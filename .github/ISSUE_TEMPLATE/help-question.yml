@@ -1,0 +1,51 @@
+name: General Help & Questions
+description: Ask for help or clarification about the website
+title: "[Help]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you need help or have questions about the website.
+        
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe your question or what you're trying to do
+      placeholder: e.g., How do I add a student to multiple activities at once? Can I export the list of participants?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic-area
+    attributes:
+      label: What is this about?
+      description: Select the general topic
+      options:
+        - Using the website
+        - Student registration/enrollment
+        - Activity management
+        - Teacher login/permissions
+        - Understanding how something works
+        - Data or reports
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What have you tried so far?
+      description: If you've already attempted to do something, describe what you tried
+      placeholder: e.g., I tried clicking on the activity card but nothing happened
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional details
+      description: Any other information that might help us understand your question
+    validations:
+      required: false

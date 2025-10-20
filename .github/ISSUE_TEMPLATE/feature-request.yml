@@ -1,0 +1,83 @@
+name: Feature Request
+description: Request a new feature or improvement to the website
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide details below so we can understand and implement your idea.
+        
+  - type: input
+    id: feature-name
+    attributes:
+      label: What feature would you like?
+      description: Give your feature a short, descriptive name
+      placeholder: e.g., Dark Mode Toggle, Calendar View, Activity Search
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why do you need this feature?
+      description: Explain the problem this feature would solve or why it would be helpful
+      placeholder: e.g., Students prefer dark interfaces and keep asking for it
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-it-works
+    attributes:
+      label: How should it work?
+      description: Describe how you imagine this feature would work from a user's perspective
+      placeholder: |
+        e.g., Add a toggle button in the top right corner. When clicked, it switches the website colors from light to dark. The setting should be remembered when the user returns.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where-to-add
+    attributes:
+      label: Where should this appear on the website?
+      description: Select which part of the website this feature relates to
+      multiple: true
+      options:
+        - Main activities page
+        - Header/navigation area
+        - Sidebar filters
+        - Activity cards
+        - Login page
+        - Entire website
+        - Other (describe in additional details)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this?
+      description: Help us understand the priority
+      options:
+        - Nice to have - would be cool but not urgent
+        - Important - would help a lot
+        - Critical - really needed soon
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or references
+      description: If you've seen this feature on other websites or apps, share links or descriptions
+      placeholder: e.g., Like the dark mode on GitHub or YouTube
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional details
+      description: Any other information that might help us implement this feature
+    validations:
+      required: false

@@ -1,0 +1,96 @@
+name: UI/Design Change
+description: Request changes to the look, feel, or layout of the website
+title: "[Design]: "
+labels: ["design", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request visual or design changes to the website.
+        
+  - type: input
+    id: design-change-summary
+    attributes:
+      label: What design change would you like?
+      description: Summarize the visual change you want
+      placeholder: e.g., Change color scheme to match school colors, Add school mascot to header
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design-area
+    attributes:
+      label: Which area needs the design change?
+      description: Select the part(s) of the website to change
+      multiple: true
+      options:
+        - Colors/color scheme
+        - Fonts/typography
+        - Header
+        - Footer
+        - Activity cards
+        - Buttons
+        - Sidebar/filters
+        - Background
+        - Icons/images
+        - Layout/spacing
+        - Entire website
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-design
+    attributes:
+      label: What does it look like now?
+      description: Describe the current design that you want to change
+      placeholder: e.g., The website uses blue colors throughout
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-design
+    attributes:
+      label: What should it look like instead?
+      description: Describe your desired design in detail
+      placeholder: e.g., Use white and lime green to match our school colors. Header should be lime green with white text.
+    validations:
+      required: true
+
+  - type: input
+    id: color-codes
+    attributes:
+      label: Specific colors (if applicable)
+      description: Provide color names, hex codes, or RGB values if you have them
+      placeholder: "e.g., Lime green: #32CD32, White: #FFFFFF"
+    validations:
+      required: false
+
+  - type: textarea
+    id: design-examples
+    attributes:
+      label: Examples or mockups
+      description: Share links to similar designs, upload mockup images, or describe examples
+      placeholder: You can paste images here or provide links to websites with similar designs
+    validations:
+      required: false
+
+  - type: dropdown
+    id: affects-usability
+    attributes:
+      label: Does this affect how people use the website?
+      description: Is this purely visual or does it change functionality?
+      options:
+        - Purely visual - doesn't change how it works
+        - Changes how users interact with it
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other information about this design change
+    validations:
+      required: false
